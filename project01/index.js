@@ -32,7 +32,7 @@ async function callOpenRouter(messages) {
     throw error;
   }
 }
-module.exports = callOpenRouter;
+// module.exports = callOpenRouter;
 
 async function main() {
   const args = process.argv.slice(2);
