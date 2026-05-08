@@ -37,7 +37,7 @@ async function callOpenRouter(messages) {
     }
 
     const data = await res.json();
-    console.log(JSON.stringify(data, null, 2));
+    // console.log(JSON.stringify(data, null, 2));
     return data.choices[0].message.content;
 
   } catch (error) {
