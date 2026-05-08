@@ -2,8 +2,8 @@
 
 ## Projects
 
-- [Project 00](./project00) - Prompt Moderation and Response Generation using an AI Service API  
-[Live Demo:]()
+<!-- - [Project 00](./project00) - Prompt Moderation and Response Generation using an AI Service API  
+[Live Demo:]() -->
 
 - [Project 01](./project01) -   
 [Live Demo:]() 
