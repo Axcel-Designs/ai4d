@@ -1,4 +1,4 @@
 .env*
 .env
 
-.mode_modules
+.mode_modules/
