@@ -46,19 +46,24 @@ async function callOpenRouter(prompt) {
 }
 
 async function main() {
-  const args = process.argv.slice(2);
+  // const args = process.argv.slice(2);
+  // console.log(process.argv);
+  // console.log(args);
+  
 
-  if (args.length === 0) {
-    console.log('Usage: node index.js "Your prompt here"');
-    process.exit(1);
-  }
+  // if (args.length === 0) {
+  //   console.log('Usage: node index.js "Your prompt here"');
+  //   process.exit(1);
+  // }
 
-  const prompt = args.join(" ");
+  // const prompt = args.join(" ");
 
-  const response = await callOpenRouter(prompt );
+  // const response = await callOpenRouter(prompt );
+  const response = await callOpenRouter('define ai' );
 
   console.log("\nAI Response:\n");
   console.log(response);
 }
-
 main();
+
+
