@@ -1,0 +1,16 @@
+{
+  "name": "project02",
+  "version": "1.0.0",
+  "description": "You have been tasked with building an **intelligent customer support system** for a bank that converses with customers and helps solve their problems.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "dotenv": "^17.4.2"
+  }
+}

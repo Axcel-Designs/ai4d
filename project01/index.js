@@ -17,7 +17,7 @@ if (!modelName) {
   process.exit(1);
 }
 
-async function callOpenRouter(messages) {
+async function callOpenRouter(prompt) {
   try {
     const res = await fetch(apiUrl, {
       method: "POST",
@@ -27,7 +27,7 @@ async function callOpenRouter(messages) {
       },
       body: JSON.stringify({
         model: modelName,
-        messages,
+        messages: [{ role: "user", content: prompt }],
       }),
     });
 
@@ -39,7 +39,6 @@ async function callOpenRouter(messages) {
     const data = await res.json();
     // console.log(JSON.stringify(data, null, 2));
     return data.choices[0].message.content;
-
   } catch (error) {
     console.error("Error calling OpenRouter API:", error);
     throw error;
@@ -56,7 +55,7 @@ async function main() {
 
   const prompt = args.join(" ");
 
-  const response = await callOpenRouter([{ role: "user", content: prompt }]);
+  const response = await callOpenRouter(prompt );
 
   console.log("\nAI Response:\n");
   console.log(response);
