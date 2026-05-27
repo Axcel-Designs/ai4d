@@ -45,6 +45,7 @@ async function promptChain() {
   ];
 
   console.log(`customers Query: `, customerQuery);
+  console.log("--------------------------");
 
   const prompt1 = `
   you are a bank customer support
@@ -56,8 +57,8 @@ async function promptChain() {
   Understand what the customer is asking or reporting
   `;
   const prompt1Res = await model(prompt1);
-
-  console.log(`customers Intent:`, prompt1Res);
+  console.log(`\ncustomers Intent:`, prompt1Res);
+  console.log("--------------------------");
 
   const prompt2 = `
 
@@ -73,18 +74,78 @@ async function promptChain() {
   Suggest one or more categories that might apply
   `;
   const prompt2Res = await model(prompt2);
+  console.log(`\nCategories suggested: `, prompt2Res);
+  console.log("--------------------------");
 
-  console.log(prompt1Res);
-  console.log(prompt1Res);
-  console.log(prompt1Res);
-  const prompt3 = ``;
-  const prompt4 = ``;
-  const prompt5 = ``;
+  const prompt3 = `
+  
+  customer Query:
+  ${customerQuery}
+  
+  customers Intent:
+  ${prompt1Res}
+  
+  ${categories.join("\n")}
 
-  model(prompt2);
-  model(prompt3);
-  model(prompt4);
-  model(prompt5);
+  Suggested Categories:
+  ${prompt2Res}
+
+  task:
+  Select the best matching category
+  `;
+
+  const prompt3Res = await model(prompt3);
+  console.log(`\nBest Matching Category: `, prompt3Res);
+  console.log("--------------------------");
+
+  const prompt4 = `
+  
+  customer Query:
+  ${customerQuery}
+  
+  customers Intent:
+  ${prompt1Res}
+  
+  ${categories.join("\n")}
+
+  Suggested Categories:
+  ${prompt2Res}
+  
+  Best Matching Category:
+  ${prompt3Res}
+
+  task:
+  Identify any extra information needed to address the request (e.g., transaction date, amount, card type, etc.).
+`;
+  const prompt4Res = await model(prompt4);
+  console.log(`\nExtra Information: `, prompt4Res);
+  console.log("--------------------------");
+
+  const prompt5 = `
+  customer Query:
+  ${customerQuery}
+  
+  customers Intent:
+  ${prompt1Res}
+  
+  ${categories.join("\n")}
+
+  Suggested Categories:
+  ${prompt2Res}
+  
+  Best Matching Category:
+  ${prompt3Res}
+
+  Extra Information:
+  ${prompt4Res}
+  
+  task:
+  Produce a suitable reply to the customer based on the chosen category
+  `;
+
+  const prompt5Res = await model(prompt5);
+  console.log(`\n Response:`, prompt5Res);
+  console.log("--------------------------");
 }
 
 promptChain();
