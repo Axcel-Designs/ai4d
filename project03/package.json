@@ -1,0 +1,17 @@
+{
+  "name": "project03",
+  "version": "1.0.0",
+  "description": "building an intelligent software requirements analysis system for a technology consulting company.",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+     "dev": "nodemon index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "dotenv": "^17.4.2"
+  }
+}
