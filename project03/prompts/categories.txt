@@ -1,0 +1,20 @@
+Based on this analysis:
+
+{analysis}
+
+Suggest possible categories.
+
+Categories:
+
+- Web Application
+- Mobile Application
+- API / Backend Service
+- Data Analytics Platform
+- AI / Machine Learning System
+- E-Commerce Platform
+- Enterprise Management System
+- System Integration
+- DevOps / Infrastructure Automation
+- General Software Project
+
+Explain why each category fits.

@@ -1,0 +1,16 @@
+Project Information:
+
+{project}
+
+Selected Category:
+
+{category}
+
+List missing requirements including:
+
+- Target users
+- Platform
+- Authentication
+- Integrations
+- Database
+- Performance

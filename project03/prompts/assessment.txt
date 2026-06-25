@@ -1,0 +1,17 @@
+Create an assessment using:
+
+Project:
+{project}
+
+Category:
+{category}
+
+Missing Requirements:
+{missing}
+
+Include:
+
+- Category
+- Summary
+- Missing Information
+- Recommended Next Steps

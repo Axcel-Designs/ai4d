@@ -1,0 +1,7 @@
+Possible categories:
+
+{categories}
+
+Choose ONLY ONE best category.
+
+Explain your reasoning.
