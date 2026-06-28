@@ -68,3 +68,5 @@ Technical Requirement
 - LangChain
 - LangChain LCEL (LangChain Expression Language)
 - You may use OpenRouter, OpenAI, Anthropic, or any compatible provider through LangChain-supported integrations.
+
+npm install langchain @langchain/openai @langchain/core dotenv
