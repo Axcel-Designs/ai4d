@@ -1,0 +1,16 @@
+{
+  "name": "project04",
+  "version": "1.0.0",
+  "description": "A complete Retrieval-Augmented Generation (RAG) system with:",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "dotenv": "^17.4.2"
+  }
+}
