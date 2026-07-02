@@ -15,23 +15,16 @@ const model = new ChatOpenAI({
 const project = process.argv[2];
 
 const interpretPrompt = fs.readFileSync("./prompts/interpret.txt", "utf8");
-
 const categoryPrompt = fs.readFileSync("./prompts/categories.txt", "utf8");
-
 const selectPrompt = fs.readFileSync("./prompts/select.txt", "utf8");
-
 const missingPrompt = fs.readFileSync("./prompts/missing.txt", "utf8");
-
 const assessmentPrompt = fs.readFileSync("./prompts/assessment.txt", "utf8");
 
+
 const interpret = ChatPromptTemplate.fromTemplate(interpretPrompt);
-
 const categories = ChatPromptTemplate.fromTemplate(categoryPrompt);
-
 const select = ChatPromptTemplate.fromTemplate(selectPrompt);
-
 const missing = ChatPromptTemplate.fromTemplate(missingPrompt);
-
 const assessment = ChatPromptTemplate.fromTemplate(assessmentPrompt);
 
 const stage1 = interpret.pipe(model);
